@@ -1,0 +1,176 @@
+:root {
+  --color-soft-red: hsl(10, 79%, 65%);
+  --color-cyan: hsl(186, 34%, 60%);
+  --color-dark-brown: hsl(25, 47%, 15%);
+  --color-medium-brown: hsl(28, 10%, 53%);
+  --color-cream: hsl(27, 66%, 92%);
+  --color-very-pale-orange: hsl(33, 100%, 98%);
+
+  --default-font-family: 'DM Sans', sans-serif;
+  --default-font-size: 18px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+  font-family: var(--default-font-family);
+  font-size: var(--default-font-size);
+}
+
+hr {
+  border-top: 1px;
+  border-color: var(--color-cream);
+  margin: 1.5rem 0;
+}
+
+.expenses-chart__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3.5rem 0.8rem;
+  background-color: var(--color-cream);
+  min-height: 100%;
+}
+
+.expenses-chart__header {
+  background-color: var(--color-soft-red);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.expenses-chart__header__recap h1 {
+  font-size: small;
+  font-weight: var(--font-weight-regular);
+}
+
+.expenses-chart__header__recap p {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.expenses-chart__info {
+  margin-top: 1rem;
+  padding: 1.5rem 1rem;
+  background-color: var(--color-very-pale-orange);
+  border-radius: 0.5rem;
+}
+
+.expenses-chart__info__week {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.expenses-chart__info__week li {
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-basis: 11%;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-medium-brown);
+}
+
+.expenses-chart__info__week li div {
+  background-color: var(--color-soft-red);
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+}
+
+.expenses-chart__info__week li:first-child div {
+  height: 25%;
+  background-color: var(--color-soft-red);
+}
+
+.expenses-chart__info__week li:nth-child(2) div {
+  height: 45%;
+  background-color: var(--color-soft-red);
+}
+
+.expenses-chart__info__week li:nth-child(3) div {
+  height: 65%;
+  background-color: var(--color-cyan);
+}
+
+.expenses-chart__info__week li:nth-child(4) div {
+  height: 40%;
+  background-color: var(--color-soft-red);
+}
+
+.expenses-chart__info__week li:nth-child(5) div {
+  height: 30%;
+  background-color: var(--color-soft-red);
+}
+
+.expenses-chart__info__week li:nth-child(6) div {
+  height: 53%;
+  background-color: var(--color-soft-red);
+}
+
+.expenses-chart__info__week li:nth-child(7) div {
+  height: 32%;
+  background-color: var(--color-soft-red);
+}
+.expenses-chart__total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expenses-chart__total__month h2 {
+  font-size: 2rem;
+  color:  var(--color-dark-brown);
+}
+
+.expenses-chart__total__month p {
+  color:  var(--color-medium-brown);
+}
+
+.expenses-chart__total__lastmonth {
+  align-self: flex-end;
+  text-align: end;
+}
+
+.expenses-chart__total__lastmonth p:first-child {
+  color:  var(--color-dark-brown);
+  font-weight: var(--font-weight-bold);
+}
+
+.expenses-chart__total__lastmonth p {
+  color:  var(--color-medium-brown);
+}
+
+.expenses-chart__footer {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  position: fixed;
+  bottom: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .expenses-chart__card {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
