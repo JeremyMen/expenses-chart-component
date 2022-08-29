@@ -65,6 +65,7 @@ hr {
 .expenses-chart__header__recap p {
   margin-top: 0.5rem;
   font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
 }
 
 .expenses-chart__info {
